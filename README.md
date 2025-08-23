@@ -10,6 +10,8 @@ The LEDs change color and brightness based on the real-time audio signal capture
 [Click here to watch the project in action]https://drive.google.com/file/d/1g8-eeuDBgM1ulEj6Ryw7smV0ocURHB7z/view?usp=sharing
 
 ---
+### Required Libraries
+- Adafruit NeoPixel
 
 ## 🛠 Components Used
 - **ESP32 Development Board**
