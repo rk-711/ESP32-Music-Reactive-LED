@@ -7,7 +7,7 @@ This project uses an **ESP32**, a **MAX9814 microphone module**, and a **WS2812B
 The LEDs change color and brightness based on the real-time audio signal captured by the microphone.
 
 ## 📹 Demo Video
-[Click here to watch the project in action!](https://drive.google.com/file/d/1g8-eeuDBgM1ulEj6Ryw7smV0ocURHB7z/view?usp=drivesdk)
+[Click here to watch the project in action]https://drive.google.com/file/d/1g8-eeuDBgM1ulEj6Ryw7smV0ocURHB7z/view?usp=sharing
 
 ---
 
