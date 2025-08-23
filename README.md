@@ -33,6 +33,38 @@ The LEDs change color and brightness based on the real-time audio signal capture
 
 ---
 
+## Setup & Libraries  
+
+### Required Libraries
+Install the following libraries in Arduino IDE:
+- **Adafruit NeoPixel** (for WS2812B LED Strip)
+- **Adafruit Unified Sensor** (dependency for sensors)
+- **Adafruit GFX** and **Adafruit SSD1306** (if using OLED display)
+- **ArduinoFFT** (if doing music spectrum effects)
+- **I2S** (for MAX9814 microphone)
+
+To install:  
+`Sketch → Include Library → Manage Libraries → Search for the above names → Install`
+
+---
+
+## Wiring Diagram  
+
+| ESP32 Pin      | MAX9814 Module      | WS2812B LED Strip | VCC / GND       |
+|----------------|---------------------|------------------|-----------------|
+| 3V3            | VCC (MAX9814)       | VCC (LED Strip)   | +3.3V / +5V      |
+| GND            | GND (MAX9814)       | GND (LED Strip)   | GND             |
+| GPIO 15        | OUT (MAX9814)       | -                | -               |
+| GPIO 5         | -                   | DIN (LED Strip)   | -               |
+
+**Notes:**  
+- Use an external 5V supply for long LED strips.  
+- Connect grounds (ESP32, power supply, LED strip) together.  
+- Add a 330Ω resistor in series with DIN and a 1000 µF capacitor across VCC–GND of the LED strip for safety.
+  <img width="892" height="593" alt="image" src="https://github.com/user-attachments/assets/19a8ce09-2f88-4ecc-bb17-81bffecebb2d" />
+
+
+
 ## 📄 Code
 The Arduino code reads the microphone's analog output and maps the volume to LED brightness and color.  
 You can find the code in the repository file: **`Music_Reactive_LED.ino`**
